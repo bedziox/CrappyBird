@@ -223,9 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdRigidbody: {fileID: 7365696692111442826}
   flapStrength: 6
-  logic: {fileID: 0}
   birdIsAlive: 1
   wing: {fileID: 0}
   wings:
   - {fileID: 21300000, guid: e8429dfdb05c8d046ba062dadedf8b68, type: 3}
   - {fileID: 21300000, guid: 74722111d50950240befeebd4f605b38, type: 3}
+  m_audioManager: {fileID: 8753705014660543514, guid: c6a851b46bc55a8418d9d6f3dde4c9d7, type: 3}

@@ -16,10 +16,12 @@ public class BirdScript : MonoBehaviour
     private float m_actionTime;
     private float m_flapPeriod = 0.2f;
     private SpriteRenderer m_spriteRenderer;
+    [SerializeField] private AudioManager m_audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         m_spriteRenderer = wing.GetComponent<SpriteRenderer>();
         m_Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
@@ -59,6 +61,7 @@ public class BirdScript : MonoBehaviour
     void Flap()
     {
         m_spriteRenderer.sprite = wings[1];
+        m_audioManager.PlaySFX(m_audioManager.sfx[(int)sfxNumber.FLAP]); // flap
         StartCoroutine(RevertToOriginalSprite());
     }
     

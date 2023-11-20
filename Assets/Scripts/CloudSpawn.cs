@@ -39,6 +39,7 @@ namespace DefaultNamespace
         {
             float highestPoint = transform.position.y + hOffset;
             Instantiate(cloud, new Vector3(transform.position.x, Range(-3, highestPoint), 0), transform.rotation);
+            cloud.transform.SetSiblingIndex(0);
         }
     }
 }

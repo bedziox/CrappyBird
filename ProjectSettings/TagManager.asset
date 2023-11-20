@@ -8,6 +8,7 @@ TagManager:
   - Cloud
   - WingUp
   - WingDown
+  - Audio
   layers:
   - Default
   - TransparentFX

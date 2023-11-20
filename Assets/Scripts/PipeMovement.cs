@@ -6,7 +6,7 @@ public class PipeMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float despawnPosition = -20;
-    public float increaseFactor = 0.01f;
+    public float increaseFactor = 0.03f;
     // Start is called before the first frame update
     void Start()
     {

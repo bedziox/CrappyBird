@@ -33,8 +33,24 @@ public class LogicScript : MonoBehaviour
 
     public void GameOver()
     {
-        if (playerScore > bestScore)
-            bestScore = playerScore;
+        if(PlayerPrefs.HasKey("bestScore"))
+        {
+            if(playerScore > PlayerPrefs.GetInt("bestScore"))
+            {
+                bestScore = playerScore;
+                PlayerPrefs.SetInt("bestScore", bestScore);
+                PlayerPrefs.Save();
+            }
+        }
+        else
+        {   
+            if(playerScore > bestScore)
+            {
+                bestScore = playerScore;
+                PlayerPrefs.SetInt("bestScore", bestScore);
+                PlayerPrefs.Save();
+            }
+        }
         bestScoreText.text = "Best score: " + bestScore;
         if(gameOverScreen)
             gameOverScreen.SetActive(true);
